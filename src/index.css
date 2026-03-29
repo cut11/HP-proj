@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-hp-dark: #0f172a; /* Slate 900 for a deep magical night */
+  --color-hp-darker: #020617; /* Slate 950 */
+  --color-hp-gold: #D3A625;
+  --color-hp-gold-light: #F1D06B;
+  --color-hp-gold-dark: #A58013;
+  --color-hp-red: #740001; /* Gryffindor */
+  --color-hp-green: #1A472A; /* Slytherin */
+  --color-hp-blue: #0E1A40; /* Ravenclaw */
+  --color-hp-yellow: #EEB939; /* Hufflepuff */
+
+  --font-wizard: 'Cinzel', serif;
+  --font-body: 'Playfair Display', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-hp-dark);
+  color: #e2e8f0;
+}
