@@ -58,14 +58,20 @@ const Creatures = () => {
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-7xl mx-auto">
-        {creatures.map((creature, index) => (
+        {creatures.map((creature, index) => {
+          // Extract the shadow value from the Tailwind arbitrary class string
+          const shadowMatch = creature.glowColor?.match(/\[(.*?)\]/);
+          const shadowValue = shadowMatch ? shadowMatch[1].replace(/_/g, ' ') : 'none';
+
+          return (
           <motion.div
             key={creature.id}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true, amount: 0.2 }}
-            className={`group bg-gray-900/60 rounded-xl overflow-hidden border border-white/10 transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 ${creature.glowColor} relative`}
+            style={{ '--card-shadow': shadowValue !== 'none' ? shadowValue : undefined }}
+            className="group bg-gray-900/60 rounded-xl overflow-hidden border border-white/10 transition-all duration-500 hover:scale-[1.03] hover:-translate-y-2 hover:[box-shadow:var(--card-shadow)] relative"
           >
             {/* Image Container */}
             <div className="w-full h-72 overflow-hidden relative bg-black/20">
@@ -92,7 +98,7 @@ const Creatures = () => {
               </p>
             </div>
           </motion.div>
-        ))}
+        )})}
       </div>
     </div>
   );
