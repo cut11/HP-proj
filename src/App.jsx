@@ -6,6 +6,7 @@ import MagicCursor from "./components/MagicCursor";
 import Characters from "./components/Characters";
 import Creatures from "./components/Creatures";
 import Gallery from "./components/Gallery";
+import LandingPage from "./components/musicPlay";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-hp-gold/5 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-hp-blue/10 blur-[120px] pointer-events-none" />
       
+      <LandingPage />
       <Navbar />
       <Hero />
       <Home />
