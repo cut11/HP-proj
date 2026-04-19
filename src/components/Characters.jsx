@@ -53,7 +53,7 @@ const Characters = () => {
           ))}
         </motion.h2>
         <p className="text-xl text-gray-300 font-body max-w-2xl mx-auto">
-          The brilliant, the brave, and the cunning individuals who shaped wizarding history.
+          The brilliant, the brave, and the cunning individuals who shaped wizarding history.  
         </p>
       </motion.div>
 
