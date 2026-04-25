@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-12">
           {/* Logo area */}
-          <a 
+          <a
             href="#home"
             className="shrink-0 flex items-center cursor-pointer group"
           >
@@ -55,7 +55,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
-            <button 
+            <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-hp-gold hover:text-hp-gold-light focus:outline-none transition-colors"
             >
@@ -76,7 +76,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      <div 
+      <div
         className={`md:hidden absolute top-full left-0 w-full bg-hp-darker/95 backdrop-blur-xl border-b border-hp-gold/20 shadow-2xl transition-all duration-300 ease-in-out transform origin-top ${isOpen ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"}`}
       >
         <div className="px-4 pt-4 pb-6 space-y-4">
